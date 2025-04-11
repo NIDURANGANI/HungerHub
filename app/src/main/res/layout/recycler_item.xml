@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/recCard"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginVertical="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_background">
+
+        <!-- Food Image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:id="@+id/recImage"
+            android:src="@drawable/add_image"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedImageViewRounded"/>
+
+        <!-- Food Name -->
+        <TextView
+            android:id="@+id/recTitle"
+            android:layout_width="285dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/recImage"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@id/recImage"
+            android:text="Food Name"
+            android:fontFamily="@font/fonth"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Quantity/Serves -->
+
+        <!-- Description -->
+
+        <!-- Pickup Location -->
+
+        <TextView
+            android:id="@+id/recPriority"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recTitle"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="115dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/fonth"
+            android:text="Serves: 4"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/recDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/recPriority"
+            android:fontFamily="@font/fonth"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="Food Description"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recLocation"
+            android:text="Pickup Location"
+            android:fontFamily="@font/fonth"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_below="@id/recDesc"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Expiry -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/recExpiry"
+            android:fontFamily="@font/fonth"
+            android:text="Expiry Time"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:layout_below="@id/recLocation"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="4dp"/>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/main"
+    tools:context=".activity_detail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Image Card -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp">
+
+            <ImageView
+                android:id="@+id/detailImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/add_image"
+                android:scaleType="centerCrop"
+                android:contentDescription="Image of the food donation" />
+        </androidx.cardview.widget.CardView>
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/detailTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Food Title"
+            android:textSize="24sp"
+            android:textColor="#FF5722"
+            android:fontFamily="@font/fonth"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="12dp" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#DDDDDD"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Quantity -->
+        <TextView
+            android:id="@+id/detailQty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Quantity: 10"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:fontFamily="@font/fonth"
+            android:paddingVertical="6dp" />
+
+        <!-- Expiry -->
+        <TextView
+            android:id="@+id/detailExpiry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Expiry Date: 2025-12-31"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:fontFamily="@font/fonth"
+            android:paddingVertical="6dp" />
+
+        <!-- Location -->
+        <TextView
+            android:id="@+id/detailLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pickup Location: Colombo, Sri Lanka"
+            android:textSize="18sp"
+            android:textColor="#333333"
+            android:fontFamily="@font/fonth"
+            android:paddingVertical="6dp" />
+
+        <!-- Description Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            android:fontFamily="@font/fonth" />
+
+        <!-- Description Text -->
+        <TextView
+            android:id="@+id/detailDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detailed description of the food item including its type, condition, and relevant notes for donation."
+            android:textSize="16sp"
+            android:textColor="#444444"
+            android:fontFamily="@font/fonth"
+            android:lineSpacingExtra="6dp"
+            android:paddingBottom="24dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="365dp"
+            android:layout_weight="1">
+
+            <com.github.clans.fab.FloatingActionMenu
+                android:id="@+id/fabMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:menu_colorNormal="@color/prclr"
+                app:menu_colorPressed="@color/prclr"
+                app:menu_fab_size="normal"
+                app:menu_icon="@drawable/list"
+                app:menu_openDirection="up"
+                app:menu_showShadow="true">
+
+                <!-- Edit -->
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/editButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/edit"
+                    app:fab_colorNormal="@color/green"
+                    app:fab_showShadow="true"
+                    app:fab_size="mini" />
+
+                <!-- Delete -->
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/deleteButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/delete"
+                    app:fab_colorNormal="@color/red"
+                    app:fab_showShadow="true"
+                    app:fab_size="mini" />
+            </com.github.clans.fab.FloatingActionMenu>
+        </RelativeLayout>
+
+    </LinearLayout>
+</ScrollView>

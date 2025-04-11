@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    tools:context=".UpdateActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="20dp"
+            android:background="@drawable/card_background">
+
+            <!-- Heading -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update Donation Details"
+                android:fontFamily="@font/fonth"
+                android:textSize="26sp"
+                android:textAlignment="center"
+                android:textColor="@color/prclr"
+                android:textStyle="bold" />
+
+            <!-- Donation Image -->
+            <ImageView
+                android:id="@+id/editImage"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/add_image" />
+
+            <!-- Title Field -->
+            <EditText
+                android:id="@+id/editTitle"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:hint="Enter food title"
+                android:textColor="@color/prclr"
+                android:fontFamily="@font/fonth"
+                android:gravity="start|center_vertical" />
+
+            <!-- Description Field -->
+            <EditText
+                android:id="@+id/editDescription"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:hint="Enter description"
+                android:textColor="@color/prclr"
+                android:fontFamily="@font/fonth"
+                android:gravity="start|top"
+                android:inputType="textMultiLine" />
+
+            <!-- Quantity Field -->
+            <EditText
+                android:id="@+id/editQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:hint="Enter quantity"
+                android:textColor="@color/prclr"
+                android:fontFamily="@font/fonth"
+                android:inputType="number" />
+
+            <!-- Expiry Date Field -->
+            <EditText
+                android:id="@+id/editExpiry"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:hint="Enter expiry date"
+                android:textColor="@color/prclr"
+                android:fontFamily="@font/fonth"
+                android:inputType="date" />
+
+            <!-- Location Field -->
+            <EditText
+                android:id="@+id/editLocation"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/card_background"
+                android:padding="16dp"
+                android:hint="Enter pickup location"
+                android:textColor="@color/prclr"
+                android:fontFamily="@font/fonth"
+                android:gravity="start|center_vertical" />
+
+            <!-- Update Button -->
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp"
+                android:text="Update"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/fonth"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</ScrollView>
